@@ -1,0 +1,20 @@
+on:
+  workflow_dispatch:
+jobs:
+  frontend_cypress:
+    runs-on: ubuntu-latest
+    name: Frontend Cypress Integration
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.15
+      - name: Install dependencies
+        run: yarn
+      - name: Run Tests
+        run: yarn run cy:run
+
