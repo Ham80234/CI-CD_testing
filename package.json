@@ -4,11 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "cypress": "^8.3.1",
-    "express": "^4.17.1",
-    "semantic-release": "^17.4.7"
+    "express": "^4.17.1"
   },
   "scripts": {
     "cy:run": "yarn run cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^8.3.1",
+    "jest": "^27.1.0",
+    "semantic-release": "^17.4.7"
   }
 }
